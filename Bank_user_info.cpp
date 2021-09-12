@@ -100,7 +100,8 @@ bool Bank_user_info::read_data(ifstream& data_file)
 	/// </summary>
 	/// <param name="data_file">reference to the file from which data will be read</param>
 	/// <returns>return true if it reads data successfully</returns>
-	data_file >> NAME >> PHONE_NUMBER >> ACCOUNT_NUMBER >> BALANCE;
+	getline(data_file, NAME);
+	data_file >> PHONE_NUMBER >> ACCOUNT_NUMBER >> BALANCE;
 	return true;
 }
 
